@@ -260,7 +260,7 @@
             ];
         }
 
-        require 'vendor/autoload.php';
+        require '../vendor/autoload.php';
         use Phpml\Classification\KNearestNeighbors;
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -322,7 +322,7 @@
             $isParticipatingDisplay = $isParticipating === 'Y' ? 'Yes' : 'No';
             // echo "<div>Total count: <strong>$age,$politicalInterest ,$employmentStatus, $maritalStatus, $educationalAttainment</strong></div>";
         
-            if ($count >= 4) {
+            if ($count >= 1) {
                 foreach ($reasons as $reasonText => $weight) {
                     if ($weight > $maxWeight) {
                         $maxWeight = $weight;
