@@ -1,0 +1,270 @@
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Name string
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Sample Three', 'Longos', 24, 'Male', 'Single', 'College_Level', 'Employed', 'Yes', ?
+
+Model file found: ../models/naivebayes.model
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Name string
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Sample Three', 'Bulihan', 17, 'Female', 'Single', 'College_Level', 'Unemployed', 'Yes', ?
+
+Model file found: ../models/naivebayes.model
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Name string
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Sample Three', 'Bulihan', 17, 'Female', 'Single', 'High_School', 'Unemployed', 'Yes', ?
+
+Model file found: ../models/naivebayes.model
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Bulihan', 17, 'Female', 'Single', 'High_School', 'Unemployed', 'Yes', ?
+
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Bulihan', 17, 'Female', 'Single', 'High_School', 'Unemployed', 'Yes', ?
+
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Bulihan', 17, 'Female', 'Single', 'High School', 'Employed', 'Yes', ?
+
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Bulihan', 22, 'Male', 'Single', 'College Level', 'Unemployed', 'Yes', ?
+
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Bulihan', 22, 'Male', 'Single', 'College Level', 'Unemployed', 'Yes', ?
+
+Error: Error executing Weka: 
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Bulihan', 22, 'Male', 'Single', 'College Level', 'Unemployed', 'Yes', ?
+
+Error: Error executing Weka: 
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Bulihan', 17, 'Female', 'Single', 'College Level', 'Unemployed', 'Yes', ?
+
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Longos', 17, 'Male', 'Single', 'College Graduate', 'Employed', 'Yes', ?
+
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Sumapang Matanda', 22, 'Male', 'Single', 'College Level', 'Unemployed', 'Yes', ?
+
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Mojon', 21, 'Female', 'Single', 'High School', 'Employed', 'No', ?
+
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Bulihan', 18, 'Female', 'Single', 'College Level', 'Unemployed', 'Yes', ?
+
+Error: Error executing Weka: 
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Bulihan', 18, 'Female', 'Single', 'College Level', 'Employed', 'Yes', ?
+
+Command executed: java -Xmx1024m -cp ../weka/weka.jar weka.classifiers.Classifier -l ../models/model1.model -T ../models/user_input.arff -p 0
+Output:
+
+Return var: 1
+Error: Error executing Weka: 
+File created successfully: ../models/user_input.arff
+Contents:
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Bulihan', 18, 'Female', 'Single', 'College Level', 'Unemployed', 'Yes', ?
+

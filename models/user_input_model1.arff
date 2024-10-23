@@ -1,0 +1,12 @@
+@relation voter_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+
+@data
+'Bulihan', 25, 'Male', 'Single', 'College Graduate', 'Employed', 'Yes'

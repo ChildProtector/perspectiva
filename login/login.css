@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('loginbg.jpg'); /* Make sure this image is in the same directory */
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    opacity: 0.76; /* Slight transparency for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    width: 300px; /* Fixed width for the login form */
+    text-align: center; /* Center text */
+}
+
+.login-container h1 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.login-container input {
+    width: 80%; /* Inputs take 80% of the container's width */
+    padding: 10px; /* Space inside the input fields */
+    margin: 10px 0; /* Space around the input fields */
+    border: 1px solid #ddd; /* Light border color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.login-container button {
+    width: 65%; /* Button takes 65% of the container's width */
+    padding: 10px; /* Space inside the button */
+    background-color: #ffeb3b; /* Yellow background */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    color: #333; /* Dark text color for contrast */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+}
+
+.login-container button:hover {
+    background-color: #fdd835; /* Slightly darker yellow on hover */
+}

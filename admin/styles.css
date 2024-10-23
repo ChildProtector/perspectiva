@@ -1,0 +1,30 @@
+.sidebar {
+    width: 200px;
+    background-color: #800000; /* Maroon */
+    color: white;
+    height: 100vh; /* Full height */
+    padding: 15px;
+    position: fixed; /* Fix sidebar to the left */
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.sidebar a:hover {
+    background-color: #600000; /* Darker maroon */
+}
+
+.content {
+    margin-left: 220px; /* Space for sidebar */
+    padding: 20px;
+}
+
+.header {
+    font-size: 24px;
+    color: #800000; /* Maroon color */
+}

@@ -1,0 +1,14 @@
+@relation voter_non_participation
+
+@attribute Barangay string
+@attribute Age numeric
+@attribute Gender {Male,Female}
+@attribute Marital_Status {Single,Married}
+@attribute Educational_Attainment {College_Graduate,College_Level,High_School,Elementary}
+@attribute Employment_Status {Employed,Unemployed}
+@attribute Political_Interest {Yes,No}
+@attribute Factors {Settings_Not_Suitable,Unaware,Uninterested,No_Money}
+
+@data
+'Bulihan', 28, 'Female', 'Married', 'High School', 'Unemployed', 'No', 'Uninterested'
+'Bangkal', 22, 'Male', 'Single', 'College Level', 'Employed', 'No', 'No_Money'
