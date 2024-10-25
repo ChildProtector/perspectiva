@@ -30,6 +30,7 @@ $_SESSION['last_activity'] = time();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,14 +43,17 @@ $_SESSION['last_activity'] = time();
             margin: auto;
             overflow: hidden;
         }
+
         .carousel-images {
             display: flex;
             transition: transform 0.5s ease;
         }
+
         .carousel-images img {
             width: 100%;
             max-width: 600px;
         }
+
         .carousel-buttons {
             position: absolute;
             top: 50%;
@@ -57,20 +61,27 @@ $_SESSION['last_activity'] = time();
             display: flex;
             justify-content: space-between;
         }
+
         .button {
             background-color: rgba(255, 255, 255, 0.7);
             border: none;
             cursor: pointer;
             padding: 10px;
         }
+
         .welcome-header {
-            text-align: center; /* Center align the welcome message */
-            font-size: 28px; /* Font size for the welcome message */
-            margin: 20px 0; /* Space around the welcome message */
-            color: #800000; /* Maroon color for the text */
+            text-align: center;
+            /* Center align the welcome message */
+            font-size: 28px;
+            /* Font size for the welcome message */
+            margin: 20px 0;
+            /* Space around the welcome message */
+            color: #800000;
+            /* Maroon color for the text */
         }
     </style>
 </head>
+
 <body>
     <div class="navbar">
         <img src="logoweb.png" alt="My Logo" class="logo">
@@ -86,7 +97,7 @@ $_SESSION['last_activity'] = time();
     </div>
     <div class="content">
         <h1 class="welcome-header">Welcome, Batang Maloleño</h1> <!-- Added welcome header -->
-        
+
         <div class="carousel">
             <div class="carousel-images" id="carouselImages">
                 <img src="carousel1.jpg" alt="Image 1">
@@ -136,4 +147,5 @@ $_SESSION['last_activity'] = time();
         document.querySelector('.carousel').addEventListener('mouseleave', startCarousel);
     </script>
 </body>
+
 </html>

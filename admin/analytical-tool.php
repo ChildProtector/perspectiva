@@ -188,6 +188,155 @@
         </div>
 
         <?php
+        function encodeData($barangay, $gender, $maritalStatus, $educationalAttainment, $employmentStatus, $politicalInterest)
+        {
+            $barangayMap = [
+                'Anilao' => 1,
+                'Atlag' => 2,
+                'Babatnin' => 3,
+                'Bagna' => 4,
+                'Bagong Bayan' => 5,
+                'Balayong' => 6,
+                'Balite' => 7,
+                'Bangkal' => 8,
+                'Barihan' => 9,
+                'Bulihan' => 10,
+                'Bungahan' => 11,
+                'Caingin' => 12,
+                'Calero' => 13,
+                'Caliligawan' => 14,
+                'Canalate' => 15,
+                'Caniogan' => 16,
+                'Catmon' => 17,
+                'Cofradia' => 18,
+                'Dakila' => 19,
+                'Guinhawa' => 20,
+                'Liang' => 21,
+                'Ligas' => 22,
+                'Longos' => 23,
+                'Look_1st' => 24,
+                'Look_2nd' => 25,
+                'Lugam' => 26,
+                'Mabolo' => 27,
+                'Mambog' => 28,
+                'Masile' => 29,
+                'Matimbo' => 30,
+                'Mojon' => 31,
+                'Namayan' => 32,
+                'Niugan' => 33,
+                'Pamarawan' => 34,
+                'Panasahan' => 35,
+                'Pinagbakahan' => 36,
+                'San_Agustin' => 37,
+                'San_Gabriel' => 38,
+                'San_Juan' => 39,
+                'San_Pablo' => 40,
+                'San_Vicente' => 41,
+                'Santiago' => 42,
+                'Santisima_Trinidad' => 43,
+                'Santo_Cristo' => 44,
+                'Santo_Niño' => 45,
+                'Santo_Rosario' => 46,
+                'Santor' => 47,
+                'Sumapang_Bata' => 48,
+                'Sumapang_Matanda' => 49,
+                'Taal' => 50,
+                'Tikay' => 51,
+            ];
+
+            $genderMap = ['Male' => 0, 'Female' => 1];
+            $maritalStatusMap = ['Single' => 0, 'Married' => 1];
+            $educationMap = ['College_Graduate' => 3, 'College_Level' => 2, 'High_School' => 1, 'Elementary' => 0];
+            $employmentMap = ['Employed' => 1, 'Unemployed' => 0];
+            $politicalInterestMap = ['Yes' => 1, 'No' => 0];
+
+            return [
+                $barangayMap[$barangay],
+                $genderMap[$gender],
+                $maritalStatusMap[$maritalStatus],
+                $educationMap[$educationalAttainment],
+                $employmentMap[$employmentStatus],
+                $politicalInterestMap[$politicalInterest]
+            ];
+        }
+
+        require '../vendor/autoload.php';
+        use Phpml\Classification\KNearestNeighbors;
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $barangay = filter_input(INPUT_POST, 'barangay', FILTER_SANITIZE_STRING);
+            $age = intval(filter_input(INPUT_POST, 'age', FILTER_SANITIZE_NUMBER_INT));
+            $gender = filter_input(INPUT_POST, 'gender', FILTER_SANITIZE_STRING);
+            $maritalStatus = filter_input(INPUT_POST, 'marital_status', FILTER_SANITIZE_STRING);
+            $educationalAttainment = filter_input(INPUT_POST, 'educational_attainment', FILTER_SANITIZE_STRING);
+            $employmentStatus = filter_input(INPUT_POST, 'employment_status', FILTER_SANITIZE_STRING);
+            $politicalInterest = filter_input(INPUT_POST, 'political_interest', FILTER_SANITIZE_STRING);
+
+
+            $input = array_merge([$age], encodeData($barangay, $gender, $maritalStatus, $educationalAttainment, $employmentStatus, $politicalInterest));
+            $count = 0;
+            $reason = '';
+            $maxWeight = 0;
+
+
+            $weights = [
+                'Underage' => 5,
+                'Lack of political interest' => 3,
+                'Financially struggling (unemployed)' => 2,
+                'No time (married)' => 1,
+                'No time (college student)' => 1
+            ];
+
+            $reasons = [];
+            if ($age < 18) {
+                $count++;
+                $reasons['Underage'] = $weights['Underage'];
+                $isParticipating = 'No';
+            }
+
+            if ($politicalInterest === 'No') {
+                $count++;
+                $reasons['Lack of political interest'] = $weights['Lack of political interest'];
+            }
+
+            if ($employmentStatus === 'Unemployed') {
+                $count++;
+                $reasons['Financially struggling (unemployed)'] = $weights['Financially struggling (unemployed)'];
+            }
+
+            if ($maritalStatus === 'Married') {
+                $count++;
+                $reasons['No time (married)'] = $weights['No time (married)'];
+            }
+
+            if ($educationalAttainment === 'College_Level' || $educationalAttainment === 'High_School') {
+                $count++;
+                $reasons['No time (college student)'] = $weights['No time (college student)'];
+            }
+            $isParticipating = 'Y';
+            $dynamicSamples[] = $input;
+            $labels = [$isParticipating];
+            $classifier = new KNearestNeighbors();
+            $classifier->train($dynamicSamples, $labels);
+            $isParticipating = $classifier->predict($input)[0];
+            $isParticipatingDisplay = $isParticipating === 'Y' ? 'Yes' : 'No';
+            // echo "<div>Total count: <strong>$age,$politicalInterest ,$employmentStatus, $maritalStatus, $educationalAttainment</strong></div>";
+        
+            if ($count >= 1) {
+                foreach ($reasons as $reasonText => $weight) {
+                    if ($weight > $maxWeight) {
+                        $maxWeight = $weight;
+                        $reason = $reasonText;
+                    }
+                }
+                $isParticipatingDisplay = 'No';
+                echo "<div class='output'>Prediction: This voter will most likely participate: <strong>$isParticipatingDisplay</strong></div>";
+                echo "<div class='output'>Reason for non-participation: <strong>$reason</strong></div>";
+                echo "<div>Total count: <strong>$count</strong></div>";
+            } else {
+                echo "<div class='output'>Prediction: This voter will most likely participate: <strong>$isParticipatingDisplay</strong></div>";
+            }
+        }
 
         ?>
     </div>
